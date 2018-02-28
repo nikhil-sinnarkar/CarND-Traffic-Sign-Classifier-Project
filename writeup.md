@@ -58,6 +58,7 @@ image = cv2.warpAffine(image,M,(cols,rows))
 ```
 I converted this augmented training dataset into grayscale followed by normalization.
 Here is an example of a traffic sign image before and after preprocessing.
+
 ![before1](./webimages/before1.JPG)
 ![after1](./webimages/after1.JPG)
 
