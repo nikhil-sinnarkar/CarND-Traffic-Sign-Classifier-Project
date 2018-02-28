@@ -47,15 +47,15 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 Initially I trained my model on the given data set without any preprocessing and got around 86% accuracy. To increase the accuracy, I implemented preprocessing and got the accuracy up to 90%. This wasn't enough so to further increase it I went for data augmentation.
 
 To augment the given training data I used rotation and brightness change. I increased the brightness of the images in training dataset by 20% and added them back to initial training data set.
-'''python
+```python
 image = cv2.multiply(image_list[i], np.array([1.2]))
-'''
+```
 Then I ramdomly selected half of the images in training dataset and rotated them and added them to initial training dataset.
-'''python
+```python
 rows,cols = image.shape[:2]
 M = cv2.getRotationMatrix2D((cols/2,rows/2), 5, 1.2)
 image = cv2.warpAffine(image,M,(cols,rows))
-'''
+```
 Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image2]
