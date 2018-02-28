@@ -42,7 +42,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ### Design and Test a Model Architecture
 
-#### 1. Preprocessing the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Preprocessing the image data.
 
 Initially I trained my model on the given data set without any preprocessing and got around 86% accuracy. To increase the accuracy, I implemented preprocessing and got the accuracy up to 90%. This wasn't enough so to further increase it I went for data augmentation.
 
@@ -56,9 +56,13 @@ rows,cols = image.shape[:2]
 M = cv2.getRotationMatrix2D((cols/2,rows/2), 5, 1.2)
 image = cv2.warpAffine(image,M,(cols,rows))
 ```
-Here is an example of a traffic sign image before and after grayscaling.
+I converted this augmented training dataset into grayscale followed by normalization.
+Here is an example of a traffic sign image before and after preprocessing.
+![before1](./webimages/before1.JPG)
+![after1](./webimages/after1.JPG)
 
-![alt text][image2]
+![before3](./webimages/before3.JPG)
+![after3](./webimages/after3.JPG)
 
 As a last step, I normalized the image data because ...
 
