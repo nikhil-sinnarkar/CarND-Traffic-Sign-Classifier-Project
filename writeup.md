@@ -119,11 +119,17 @@ My final model results were:
 Here are seven German traffic signs that I found on the web:
 
 ![1](./webimages/1.jpg)	-	Stop
+
 ![2](./webimages/2.jpg)	-	Speed limit (70km/h)
+
 ![3](./webimages/3.jpg)	-	Roundabout mandatory
+
 ![4](./webimages/4.jpg)	-	No entry
+
 ![5](./webimages/5.jpg)	-	Turn left ahead
+
 ![6](./webimages/6.jpg)	-	Wild animals crossing
+
 ![7](./webimages/7.jpg)	-	Right-of-way at the next intersection
 
 Some of the image might be difficult to classify. For eg. The second image as there is very little difference form other speed limit signs. The fourth image of "No Entry" is similar to "No passing" because in no passing the 2 cars form a kind of horizontal line.
