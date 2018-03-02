@@ -118,7 +118,7 @@ My final model results were:
 
 Here are seven German traffic signs that I found on the web:
 
-![1](./webimages/1.JPG) ![2](./webimages/2.JPG) ![3](./webimages/3.JPG) 
+![1](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/1.jpg) ![2](./webimages/2.JPG) ![3](./webimages/3.JPG) 
 ![4](./webimages/4.JPG) ![5](./webimages/5.JPG) ![6](./webimages/6.JPG)
 ![7](./webimages/7.JPG)
 
