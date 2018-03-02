@@ -118,13 +118,13 @@ My final model results were:
 
 Here are seven German traffic signs that I found on the web:
 
-![1](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/1.jpg) 
-![2](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/2.jpg) 
-![3](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/3.jpg) 
-![4](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/4.jpg) 
-![5](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/5.jpg) 
-![6](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/6.jpg)
-![7](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/7.jpg)
+![1](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/1.jpg)	 
+![2](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/2.jpg)	 
+![3](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/3.jpg)	 
+![4](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/4.jpg)	 
+![5](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/5.jpg)	 
+![6](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/6.jpg)	
+![7](https://github.com/nikhil-sinnarkar/CarND-Traffic-Sign-Classifier-Project/blob/master/webimages/7.jpg)	
 
 Some of the image might be difficult to classify. For eg. The second image as there is very little difference form other speed limit signs. The fourth image of "No Entry" is similar to "No passing" because in no passing the 2 cars form a kind of horizontal line.
 
