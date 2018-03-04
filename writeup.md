@@ -27,7 +27,7 @@ I used the numpy library to calculate summary statistics of the traffic
 signs data set:
 
 * The size of training set is 34799
-* The size of the validation set is ?
+* The size of the validation set is 4410
 * The size of test set is 12630
 * The shape of a traffic sign image is 32x32x3
 * The number of unique classes/labels in the data set is 43
@@ -62,8 +62,17 @@ Here is an example of a traffic sign image before and after preprocessing.
 ![before1](./writeup_images/before1.JPG)
 ![after1](./writeup_images/after1.JPG)
 
+![before2](./writeup_images/before2.JPG)
+![after2](./writeup_images/after2.JPG)
+
 ![before3](./writeup_images/before3.JPG)
 ![after3](./writeup_images/after3.JPG)
+
+![before4](./writeup_images/before4.JPG)
+![after4](./writeup_images/after4.JPG)
+
+![before5](./writeup_images/before5.JPG)
+![after5](./writeup_images/after5.JPG)
 
 
 #### 2. Final model architecture.
@@ -94,7 +103,7 @@ My final model consisted of the following layers:
 
 To train the model, I used Adam Optimizer with learning rate = 0.001
 
-I kept the batch size as 128 and changed the number of epochs to 25.
+I changed the batch size to 100 and the number of epochs to 25.
 
 #### 4. Getting the desired validation accuracy (i.e. > 0.93). 
 
@@ -104,17 +113,17 @@ I further increased the accuracy by doing data augmentation also I used dropout 
 
 The final values of the parameters I used -
 * No. of epochs = 25
-* Batch size = 128
+* Batch size = 100
 * Learning rate = 0.001
 * Keep prob for dropout = 0.7
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 0.995
+* validation set accuracy of 0.959 
+* test set accuracy of 0.943
  
 
-### Test the Model on New Images
+### Testing the Model on New Images
 
 Here are seven German traffic signs that I found on the web:
 
@@ -132,9 +141,9 @@ Here are seven German traffic signs that I found on the web:
 
 ![7](./webimages/7.jpg)	-	Right-of-way at the next intersection
 
-Some of the image might be difficult to classify. For eg. The second image as there is very little difference form other speed limit signs. The fourth image of "No Entry" is similar to "No passing" because in no passing the 2 cars form a kind of horizontal line.
+Some of the image might be difficult to classify. For eg. The second image as there is very little difference form other speed limit signs. The fourth image of "No Entry" has many similar features to "STOP" sign, "left turn/right turn" sign.
 
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### Model's predictions on these new traffic signs.
 
 Here are the results of the prediction:
 
@@ -143,84 +152,84 @@ Here are the results of the prediction:
 | Stop sign      						| Stop sign   							| 
 | 70 km/h     							| 70 km/h 								|
 | Roundabout mandatory					| Roundabout mandatory					|
-| No entry	      						| No passing					 		|
+| No entry	      						| No Entry 						 		|
 | Turn left ahead						| Turn left ahead      					|
 | Wild animals crossing 				| Wild animals crossing					|
 | Right-of-way at the next intersection	| Right-of-way at the next intersection	|
 
 
-The model was able to correctly guess 6 of the 7 traffic signs, which gives an accuracy of 85.7%.
+The model was able to correctly guess 7 of the 7 traffic signs, which gives an accuracy of 100%.
 
-#### 3. Softmax probabilities for each prediction.
+#### Softmax probabilities for each prediction.
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top 5 soft max probabilities were
 
 | Probability         		|     Prediction	        					| 
 |:-------------------------:|:---------------------------------------------:| 
 | 1.0         				| Stop sign   									| 
-| 1.5827489569293385e-16	| Speed limit (30km/h)							|
-| 6.244197185238654e-17		| Speed limit (50km/h)							|
-| 2.601082836498919e-17		| Speed limit (60km/h)			 				|
-| 6.200373714732508e-19    	| Yield			      							|
+| 5.808381611237636e-19		| Speed limit (30km/h)							|
+| 1.6342845176636277e-19	| Road work										|
+| 1.9626558014898303e-20	| Yield 						 				|
+| 2.4977282773580867e-24   	| Turn left ahead      							|
 
 
 For the second image ...
 
 | Probability         		|     Prediction	        					| 
 |:-------------------------:|:---------------------------------------------:| 
-| 0.9257188439369202		| Speed limit (70km/h)   						| 
-| 0.03445085883140564		| Speed limit (50km/h)							|
-| 0.03213305398821831		| Speed limit (30km/h)							|
-| 0.007658441085368395		| Speed limit (80km/h)			 				|
-| 3.2226515031652525e-05   	| Speed limit (20km/h) 							| 
+| 0.990625262260437			| Speed limit (70km/h)   						| 
+| 0.009373641572892666		| Speed limit (30km/h)							|
+| 1.0292650358678657e-06	| Speed limit (20km/h)							|
+| 4.76350894865966e-16		| Stop 							 				|
+| 1.2416025993046268e-16   	| Speed limit (50km/h) 							| 
 
 For the third image ...
 
 | Probability         		|     Prediction	        					| 
 |:-------------------------:|:---------------------------------------------:| 
-| 0.8391516208648682		| Roundabout mandatory   						| 
-| 0.07796236872673035		| Traffic signals								|
-| 0.07510343194007874		| Bicycles crossing								|
-| 0.004488117527216673		| Children crossing				 				|
-| 0.0014104560250416398   	| Priority road 								| 
+| 1.0						| Roundabout mandatory   						| 
+| 1.2043975842687682e-12	| Right-of-way at the next intersection			|
+| 6.449767952251655e-15		| Priority Road 								|
+| 1.968727127325885e-15		| Speed limit (30km/h)			 				|
+| 1.1764644951113503e-15   	| Children crossing								| 
 
 For the fourth image ...
 
 | Probability         		|     Prediction	        					| 
 |:-------------------------:|:---------------------------------------------:| 
-| 0.936417818069458			| No passing			   						| 
-| 0.06358210742473602		| No Entry										|
-| 8.132214901479529e-09		| Vehicles over 3.5 metric tons prohibited		|
-| 1.6441529249178188e-09	| Ahead only					 				|
-| 7.352458225584613e-11   	| Priority road 								| 
+| 0.48899656534194946		| No entry 				   						| 
+| 0.45303094387054443		| Turn left ahead								|
+| 0.035171810537576675		| Stop 											|
+| 0.018280770629644394		| Keep right					 				|
+| 0.0036373217590153217   	| Yield 		 								| 
 
 For the fifth image ...
 
 | Probability         		|     Prediction	        					| 
 |:-------------------------:|:---------------------------------------------:| 
 | 1.0						| Turn left Ahead  		 						| 
-| 2.827686745349735e-23		| Ahead only									|
-| 2.4810596834086216e-26	| Keep right									|
-| 1.8563093812814658e-32	| Speed limit (60km/h)			 				|
-| 0.0					   	| Speed limit (20km/h) 							| 
+| 6.099916765241005e-19		| Keep right									|
+| 8.904519807246355e-20 	| Speed limit (30km/h)							|
+| 1.8049882701022258e-21	| Roundabout mandatory			 				|
+| 1.5343883303883637e-21   	| Ahead only		 							| 
 
 For the sixth image ...
 
 | Probability         		|     Prediction	        					| 
 |:-------------------------:|:---------------------------------------------:| 
 | 1.0						| Wild animals crossing   						| 
-| 1.0015952843045288e-16	| Double curve									|
-| 1.8813556350390394e-22	| Dangerous curve to the left					|
-| 1.0560101385549895e-28	| Road work						 				|
-| 6.832963612805199e-34   	| No passing for vehicles over 3.5 metric tons	| 
+| 8.511694940275641e-23 	| Double curve									|
+| 5.739182190576888e-33 	| Dangerous curve to the left					|
+| 8.432326288916581e-37 	| Road work						 				|
+| 6.424694498973079e-38   	| Bicycles crossing								| 
 
 For the seventh image ...
 
 | Probability         		|     Prediction	        					| 
 |:-------------------------:|:---------------------------------------------:| 
 | 1.0						| Right-of-way at the next intersection   		| 
-| 4.868115643455838e-29		| Beware of ice/snow							|
-| 0.0						| Speed limit (20km/h)							|
-| 0.0						| Speed limit (30km/h)				 			|
-| 0.0   					| Speed limit (50km/h) 							| 
+| 1.7329427361630205e-28	| Beware of ice/snow							|
+| 2.2679984243183293e-29	| Roundabout mandatory							|
+| 1.5482513207109763e-30	| Pedestrians    					 			|
+| 4.799873181235792e-35		| Priority Road 	 							| 
 
