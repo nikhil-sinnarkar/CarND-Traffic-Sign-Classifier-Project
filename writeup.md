@@ -59,20 +59,13 @@ image = cv2.warpAffine(image,M,(cols,rows))
 I converted this augmented training dataset into grayscale followed by normalization.
 Here is an example of a traffic sign image before and after preprocessing.
 
-![before1](./writeup_images/before1.JPG)
-![after1](./writeup_images/after1.JPG)
-
-![before2](./writeup_images/before2.JPG)
-![after2](./writeup_images/after2.JPG)
-
-![before3](./writeup_images/before3.JPG)
-![after3](./writeup_images/after3.JPG)
-
-![before4](./writeup_images/before4.JPG)
-![after4](./writeup_images/after4.JPG)
-
-![before5](./writeup_images/before5.JPG)
-![after5](./writeup_images/after5.JPG)
+| Before Preprocessing 						| After preprocessing 						|
+|:-----------------------------------------:|:-----------------------------------------:|
+| ![before1](./writeup_images/before1.JPG)	| ![after1](./writeup_images/after1.JPG)  	|
+| ![before2](./writeup_images/before2.JPG)	| ![after2](./writeup_images/after2.JPG)	|
+| ![before3](./writeup_images/before3.JPG)	| ![after3](./writeup_images/after3.JPG)	|
+| ![before4](./writeup_images/before4.JPG)	| ![after4](./writeup_images/after4.JPG)	|
+| ![before5](./writeup_images/before5.JPG)	| ![after5](./writeup_images/after5.JPG)	|
 
 
 #### 2. Final model architecture.
