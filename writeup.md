@@ -6,7 +6,7 @@
 ---
 
 The goals / steps of this project are the following:
-* Load the data set (see below for links to the project data set)
+* Load the data set (click [here](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-signs-data/traffic-signs-data.zip) to download the project data set)
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
